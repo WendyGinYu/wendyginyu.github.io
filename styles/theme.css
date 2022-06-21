@@ -4,14 +4,12 @@ body {
     font-size: 16px;
     line-height: 20px;
     font-family: 'Source Code Pro', 'Roboto mono' , monospace;
+    min-height:80%;
+    margin:0;
+    padding:0;
+
 }
 
-a::before {
-    content: '<'
-}
-a::after {
-    content: '>'
-}
 a:empty::before,
 a:empty::after {
     content: ''
@@ -58,10 +56,12 @@ h1,h2,h3,h4,h5,h6 {
 .container {
     background: #233338;
     max-width: 1200px;
-    height: calc(100vh - 4em);
+    height: calc(90vh - 4em);
     overflow: auto;
     margin: 0 auto 1em auto;
     border-radius: 0 0 10px 10px;
+    min-height:80%;
+    padding-bottom:100px
 }
 
 @media screen and (max-width: 640px) {
@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6 {
     .container {
         margin: 0 auto;
         border-radius: 0;
-        height: 100vh;
+        
     }
 }
 
@@ -301,11 +301,20 @@ h1,h2,h3,h4,h5,h6 {
     content: '> ';
 }
 /*footer*/
+.footer{
+    position:absolute;
+    bottom:0;
+    width:80%;
+    height:100px;}
 .footer .footer-links{
     padding: 1em 0;
     display: flex;
+    position: relative
     justify-content: center;
 }
 .footer .footer-copyright{
+    position: relative
     text-align: center;
+    
 }
+
